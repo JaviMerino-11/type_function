@@ -14,6 +14,10 @@ class A:
         return self.__b
 
 
+def k(self):
+    print('Hola tios')
+
+
 if __name__ == '__main__':
     class_list = []
 
@@ -32,11 +36,12 @@ if __name__ == '__main__':
     print(type(b))
     print("\n")
 
-    class_c = type('C', (A,), {'value_b': 3})
+    class_c = type('C', (A,), {'value_b': 3, 'c': k})
     class_list.append(class_c)
     c = class_c(a=4)
     print(c.a)
     print(c.b)
+    c.c()
     print(type(c))
     print("\n")
 
